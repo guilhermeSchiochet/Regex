@@ -4,7 +4,7 @@
 
 ![certificate](https://user-images.githubusercontent.com/88117244/198894255-d4ae8e68-8650-48c1-9cb8-184cd9c87732.png)
 
-* Esse projeto contem a utilizacao de regex para validar tipos diferentes de campos, é um projeto mais habito para testes onde nada foi feito com 100% serio.
+* Esse projeto Contém a utilização de regex para validar tipos diferentes de campos, é um projeto mais habito para testes onde nada foi feito com 100% serio.
 
 Base de aprendizagem sobre Regex:
 
