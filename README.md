@@ -1,4 +1,4 @@
-# Projeto utilziado Regex
+# Projeto utilizando Regex
 
 ### Curso Realizado
 
