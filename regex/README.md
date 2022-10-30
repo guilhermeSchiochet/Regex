@@ -1,16 +1,15 @@
-# regex
+## Projeto desenvolvido com o objetivo de Aprender e utuilizar Regex.
 
-A new Flutter project.
 
-## Getting Started
+*   Curso realizado > https://masterclass.flutterando.com.br/public/products/827e7911-30fa-4ea3-9ec7-3a65183ee475
+Base de aprendizado(Na pasta Lib do projetio foi realizado testes para aprender e colocar em pratica oque foi aprendido)
+## Oque é o Regex?
+São expressões regulares.
+Expressões Regulares são padrões de caracteres que associam sequências de caracteres no texto.
+Com regex você pode buscar, validar e alterar qualquer padrão de caracteres em qualquer texto.
 
-This project is a starting point for a Flutter application.
+Para mais informacões >
 
-A few resources to get you started if this is your first Flutter project:
+*    https://medium.com/cwi-software/e-o-regex-como-vai-657f94388dc,
+*    https://blog.flutterando.com.br/vamos-falar-de-regex-8a2991d71ed9
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
