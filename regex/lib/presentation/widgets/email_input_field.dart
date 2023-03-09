@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:regex/domain/usecases/validate_email_usecase.dart';
-import 'package:regex/presentation/widgets/theme_app.dart';
+import 'package:regex/presentation/widgets/text_form_field_builder.dart';
 
 class EmailInputField extends StatefulWidget {
   final ValidateEmailUseCase validateEmailUseCase;
@@ -26,39 +27,26 @@ class _EmailInputFieldState extends State<EmailInputField> {
 
   void _validateEmail(String email) async {
     final isValid = await widget.validateEmailUseCase(email);
-    setState(() {
-      _isValid = isValid;
-      _isInitialValidation = true;
-    });
+    
+    if(isValid != _isValid) {
+      setState(() {
+        _isValid = isValid;
+        _isInitialValidation = true;
+      });
+    }
   }
-
+  
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      controller: _emailController,
-      decoration: InputDecoration(
-        labelText: 'E-mail',
-        hintText: 'Digite o seu e-mail',
-        errorText: _isInitialValidation && !_isValid ? 'E-mail inválido' : null,
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: BorderSide(color: ThemeApp.blueGrey),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: BorderSide(color: Colors.red),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(8.0),
-          borderSide: BorderSide(color: Colors.red),
-        ),
-      ),
-      keyboardType: TextInputType.emailAddress,
-      autovalidateMode: AutovalidateMode.onUserInteraction,
+    return TextFormFieldBuilder(
+      labelText: 'E-mail',
       onChanged: _validateEmail,
+      controller: _emailController,
+      hintText: 'Digite o seu e-mail',
+      keyboardType: TextInputType.emailAddress,
+      autovalidateMode: AutovalidateMode.onUserInteraction ,
+      errorText: _isInitialValidation && !_isValid ? 'E-mail inválido' : null,
+      formatter: [],
     );
   }
 }

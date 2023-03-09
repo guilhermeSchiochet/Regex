@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ThemeApp {
-  static Color blueGrey = Color.fromRGBO(55, 71, 79, 1);
+  static Color blueGrey = Color(0xFF37474F);
   
   static Color white = Color.fromRGBO(255, 255, 255, 1);
 
